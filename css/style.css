@@ -145,3 +145,49 @@ h2 {
   box-shadow: 0 0 1em lightgray;
   margin: 3rem auto;
 }
+
+ol {
+  list-style: none;
+}
+
+.formation {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding-left: 4rem;
+  padding-top: 2rem;
+}
+.formation ol {
+  width: 75%;
+  list-style: circle;
+}
+h3 {
+  font-family: "Kalam", cursive;
+  margin-bottom: 0;
+  margin-left: 1rem;
+  align-self: center;
+}
+
+h4,
+h5 {
+  font-size: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 0;
+}
+.formation p {
+  margin-bottom: 0.3rem;
+  margin-left: 1rem;
+  font-size: 1rem;
+}
+
+.formation .article {
+  margin-bottom: 2rem;
+}
+
+.hobbies {
+  display: flex;
+  flex-direction: row;
+}
+.hobbies span {
+  font-size: 2rem;
+}
