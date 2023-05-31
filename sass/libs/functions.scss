@@ -1,0 +1,18 @@
+$base_font_size: 16px !default;
+
+@use "sass:math";
+// permet de définir une autre taille dans le doc style.scss
+@function strip-units($number) {
+  @return math.div($number, ($number * 0 + 1));
+}
+
+@function rem($size, $base: $base_font_size) {
+  @return calc(1rem * $size / strip-units($base));
+}
+
+//utilisation : padding =rem(5)
+
+@function em($size, $base: $base_font_size) {
+  @return calc(1em * $size / strip-units($base));
+}
+// si utilisé avec une police en rem le padding en em va dépendre de la taille de la police
