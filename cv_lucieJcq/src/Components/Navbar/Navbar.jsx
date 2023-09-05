@@ -27,10 +27,16 @@ const NavBar = () => {
     };
 
     return (
-        <AppBar position="static" color="transparent">
+        <AppBar
+            position="static"
+            style={{
+                backgroundColor: "rgba(255, 255, 255, 0.677)",
+            }}
+        >
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Avatar
+                        color="primary"
                         alt="logo"
                         src={logo}
                         sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
@@ -105,6 +111,7 @@ const NavBar = () => {
                     </Box>
 
                     <Avatar
+                        color="primary"
                         src={logo}
                         alt="Logo"
                         sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
