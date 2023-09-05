@@ -19,20 +19,17 @@
 
   <body>
     <div class="page">
-      <header >
+      <header id = "up">
         <nav>
-          <img src="img/feuille.png" alt="icone">
+          <a href="#up:void(0)"><img src="img/feuille.png" alt="icone"></a>
           <ol class="navbar">
-            <li>Présentation</li>
-            <li>Compétences</li>
-            <li>Formation</li>
+            <li> <a href="#about:void(0)"> Présentation</a></li>
+            <li ><a href="#skills">Compétences</a></li>
+            <li ><a href="#formation">Formation</a></li>
 
-            <li>Expériences</li>
-            <li>Portfolio</li>
-            <li>Contact</li>
-            <li>
-              
-            </li>
+            <li><a href="#experience">Expériences</a></li>
+            <li ><a href="#portfolio">Portfolio</a></li>
+            <li id ="contact"><Contact href="#contact">Contact</a></li>
           </ol>
           <div>
             <img src="/img/printer.png" alt="mode">
@@ -47,16 +44,16 @@
           <h2 id="job">Développeuse Front-End junior</h2>
         </div>
 
-        <div class="scrolldown-wrapper">
-	        <div class="scrolldown">
-		        <svg height="30" width="10">
-		         <circle class="scrolldown-p1" cx="5" cy="15" r="2" />
-			       <circle class="scrolldown-p2" cx="5" cy="15" r="2" />
-		        </svg>
-	        </div>
+    <div class="scrolldown-wrapper">
+	  <div class="scrolldown">
+		  <svg height="30" width="10">
+		<circle class="scrolldown-p1" cx="5" cy="15" r="2" />
+		<circle class="scrolldown-p2" cx="5" cy="15" r="2" />
+	  </svg>
+	  </div>
         </div>
       </header>
-
+<h2 class="card_title" id ="about"></h2>
       <main>
         <section class="about">
           <div class="presentation">
@@ -94,16 +91,16 @@
 <div class="hobbies">
   <span class="material-symbols-outlined">menu_book</span>
   <span class="material-symbols-outlined">photo_camera</span>
-   <span class="material-symbols-outlined">deceased</span>
-   <span class="material-symbols-outlined">movie</span>
+  <span class="material-symbols-outlined">deceased</span>
+  <span class="material-symbols-outlined">movie</span>
   </div>
             </div>
           </div>
         </section>
 
-        <h2 id="card_title">Compétences professionnelles</h2>
+        <h2 class="card_title" id ="skills">Compétences professionnelles</h2>
 
-        <section class="skills">
+        <section class="skills" >
           <div>
             <h2>Hard Skills</h2>
             <ol class="hardSkills">
@@ -156,8 +153,8 @@
             </ol>
           </div class="soft">
         </section>
-<h2 id="card_title">Formations</h2>
-        <section class="formation">
+<h2 class="card_title" id ="formation">Formations</h2>
+        <section class="formation" >
 
           <div class="article">
             <h3>Titre professionnel Développeur Web & Mobile</h3>
@@ -221,8 +218,8 @@
           
         </section>
 
-        <h2 id="card_title">Expériences</h2>
-        <section class="experience">
+        <h2 class="card_title" id ="experience">Expériences</h2>
+        <section class="experience" >
                  <div class="article">
             <h3>Nom du projet</h3>
             <h4>Oclock (2023) - projet de fin d'étude</h4>
@@ -233,8 +230,8 @@
            Quasi expedita repellendus officia in perferendis voluptate sit iure, eligendi eos perspiciatis! Qui, dolore facere! Vitae ducimus quibusdam nemo dolorem ipsa laudantium, iure incidunt vel, distinctio assumenda esse sapiente. Tenetur.</p>
           </div>
         </section>
-        <h2 id="card_title">Portfolio</h2>
-        <section class="portfolio">
+        <h2 class="card_title" id ="portfolio">Portfolio</h2>
+        <section class="portfolio" >
           <p class="">En construction</p>
         </section>
       </main>

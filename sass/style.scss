@@ -19,6 +19,12 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  a {
+    color: #595e54;
+    &:hover {
+      color: darken($color: #41463c, $amount: 0);
+    }
+  }
 
   div img {
     width: rem(65);
@@ -50,7 +56,6 @@ header {
   background-size: cover;
   background-position: 25%;
   background-attachment: scroll;
-  margin-bottom: rem(70);
 
   .scrolldown-wrapper {
     left: 50%;
@@ -135,6 +140,9 @@ header {
   .description {
     padding-left: 1.5rem;
   }
+  h2 {
+    padding-left: em(16);
+  }
   .description div {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -194,14 +202,15 @@ header {
     margin: 0.6rem;
   }
 }
-#card_title {
+.card_title {
   font-family: "Kalam", cursive;
   font-weight: 700;
   font-size: 1.8rem;
   color: #858d7d;
-  padding: 1rem;
+  padding: rem(16);
+  padding-top: rem(90);
   margin: 1rem auto;
-  margin-top: 10rem;
+  margin-top: rem(70);
   text-transform: uppercase;
   text-align: center;
 }

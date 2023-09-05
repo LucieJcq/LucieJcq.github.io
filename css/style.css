@@ -515,6 +515,12 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+nav a {
+  color: #595e54;
+}
+nav a:hover {
+  color: #41463c;
+}
 nav div img {
   width: 4.0625rem;
   padding: 0.9375em;
@@ -541,7 +547,6 @@ header {
   background-size: cover;
   background-position: 25%;
   background-attachment: scroll;
-  margin-bottom: 4.375rem;
 }
 header .scrolldown-wrapper {
   left: 50%;
@@ -618,6 +623,9 @@ header .scrolldown-p2 {
 .about .description {
   padding-left: 1.5rem;
 }
+.about h2 {
+  padding-left: 1em;
+}
 .about .description div {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -671,14 +679,15 @@ header .scrolldown-p2 {
   margin: 0.6rem;
 }
 
-#card_title {
+.card_title {
   font-family: "Kalam", cursive;
   font-weight: 700;
   font-size: 1.8rem;
   color: #858d7d;
   padding: 1rem;
+  padding-top: 5.625rem;
   margin: 1rem auto;
-  margin-top: 10rem;
+  margin-top: 4.375rem;
   text-transform: uppercase;
   text-align: center;
 }
