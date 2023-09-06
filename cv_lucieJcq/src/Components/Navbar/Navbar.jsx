@@ -28,7 +28,7 @@ const NavBar = () => {
 
     return (
         <AppBar
-            position="static"
+            position="fixed"
             style={{
                 backgroundColor: "rgba(255, 255, 255, 0.677)",
             }}
