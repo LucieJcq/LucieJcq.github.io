@@ -2,6 +2,7 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import NavBar from "../Navbar/Navbar";
+import { Zoom } from "@mui/material";
 import background from "../../assets/background-trees.jpg";
 import { ScrollDown } from "../Scrolldown/Scrolldown";
 
@@ -19,7 +20,7 @@ const Header = () => {
         >
             <NavBar />
             <Box
-                style={{
+                sx={{
                     height: "100vh",
                     color: "white",
                 }}
@@ -28,23 +29,39 @@ const Header = () => {
                 justifyContent="center"
                 alignItems="center"
             >
-                <Typography
-                    variant="h1"
-                    sx={{
-                        fontFamily: "CabinSketch",
-                        fontWeight: 700,
+                <Zoom
+                    in
+                    style={{
+                        transitionDelay: "500ms",
+                        transitionDuration: "2s",
                     }}
                 >
-                    Lucie JACQUEMIN
-                </Typography>
-                <Typography
-                    variant="h2"
-                    sx={{
-                        fontFamily: "CabinSketch",
+                    <Typography
+                        variant="h1"
+                        sx={{
+                            fontFamily: "CabinSketch",
+                            fontWeight: 700,
+                        }}
+                    >
+                        Lucie JACQUEMIN
+                    </Typography>
+                </Zoom>
+                <Zoom
+                    in
+                    style={{
+                        transitionDelay: "1000ms",
+                        transitionDuration: "2s",
                     }}
                 >
-                    Web Développeuse junior
-                </Typography>
+                    <Typography
+                        variant="h2"
+                        sx={{
+                            fontFamily: "CabinSketch",
+                        }}
+                    >
+                        Web Développeuse junior
+                    </Typography>
+                </Zoom>
             </Box>
             <ScrollDown />
         </Container>
