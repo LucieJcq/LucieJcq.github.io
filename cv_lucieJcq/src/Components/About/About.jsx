@@ -34,6 +34,7 @@ const About = () => {
             maxWidth="md"
             sx={{
                 marginTop: "4rem",
+                marginBottom: "4rem",
                 padding: "2rem",
                 backgroundColor: "rgba(	133,	141,	125, 0.2)",
                 borderRadius: 20,

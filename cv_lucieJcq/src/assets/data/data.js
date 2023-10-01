@@ -41,4 +41,72 @@ export default {
             },
         ],
     },
+    skills: {
+        hardskills: {
+            name: "Hardskills",
+            skills: [
+                {
+                    name: "HTML",
+                    icon: "fab fa-html5",
+                },
+                {
+                    name: "CSS",
+                    icon: "fab fa-css3-alt",
+                },
+                {
+                    name: "Javascript",
+                    icon: "fab fa-js-square",
+                },
+                {
+                    name: "React",
+                    icon: "fab fa-react",
+                },
+                {
+                    name: "Git",
+                    icon: "fab fa-git-alt",
+                },
+                {
+                    name: "Wordpress",
+                    icon: "fab fa-wordpress-simple",
+                },
+                {
+                    name: "PHP",
+                    icon: "fab fa-php",
+                },
+                {
+                    name: "SQL",
+                    icon: "fas fa-database",
+                },
+            ],
+        },
+        softskills: {
+            name: "Softskills",
+            skills: [
+                {
+                    name: "Curieuse",
+                    icon: "fas fa-search",
+                },
+                {
+                    name: "Autonome",
+                    icon: "fas fa-user",
+                },
+                {
+                    name: "Travail en équipe",
+                    icon: "fas fa-users",
+                },
+                {
+                    name: "Communication",
+                    icon: "fas fa-comments",
+                },
+                {
+                    name: "Adaptabilité",
+                    icon: "fas fa-adjust",
+                },
+                {
+                    name: "Analyse constructive",
+                    icon: "fas fa-chart-line",
+                },
+            ],
+        },
+    },
 };
