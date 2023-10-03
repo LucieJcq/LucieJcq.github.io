@@ -92,7 +92,6 @@ const NavBar = () => {
                                 }}
                             >
                                 {datas.parts.map((part) => {
-                                    console.log(part);
                                     return (
                                         <MenuItem
                                             key={part.name}

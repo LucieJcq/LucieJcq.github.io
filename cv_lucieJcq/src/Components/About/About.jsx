@@ -1,5 +1,4 @@
-import Container from "@mui/material/Container";
-import { Box } from "@mui/material";
+import { Box, Container, useMediaQuery } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import datas from "../../assets/data/data.js";
 
@@ -29,15 +28,18 @@ function AboutSection(props) {
 }
 
 const About = () => {
+    const isDesktop = useMediaQuery("(min-width: 1024px)");
+    const isMobile = useMediaQuery("(max-width: 600px)");
+
     return (
         <Container
             maxWidth="md"
             sx={{
-                marginTop: "4rem",
-                marginBottom: "4rem",
-                padding: "2rem",
+                borderRadius: isDesktop ? 20 : 0,
                 backgroundColor: "rgba(	133,	141,	125, 0.2)",
-                borderRadius: 20,
+                margin: isDesktop ? "4rem auto" : 0,
+                // marginBottom: isDesktop ? "4rem" : 0,
+                padding: isMobile ? "3rem 0" : "4rem 0",
             }}
         >
             <Box
@@ -47,15 +49,21 @@ const About = () => {
             >
                 <Typography
                     variant="h2"
-                    sx={{ fontFamily: "AmaticSC", fontWeight: 700 }}
+                    sx={{
+                        fontFamily: "AmaticSC",
+                        fontWeight: 700,
+                        paddingBottom: 1,
+                    }}
                 >
                     {datas.about.title}
                 </Typography>
             </Box>
             {datas.about.texts.map((text) => (
-                <Box
+                <Typography
+                    variant="body2"
+                    key={Object.keys(text)}
                     sx={{
-                        padding: "1rem 5rem",
+                        padding: "1rem auto",
                         fontSize: "1.1rem",
                         color: "black",
                         textAlign: "center",
@@ -68,8 +76,8 @@ const About = () => {
             ))}
             <Box
                 sx={{
-                    margin: "0 auto",
-                    padding: "2rem 5rem",
+                    margin: "1.5rem auto",
+                    padding: "2rem auto",
                 }}
             >
                 <Typography

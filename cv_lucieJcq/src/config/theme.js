@@ -51,23 +51,55 @@ export const theme = createTheme({
     typography: {
         h1: {
             fontSize: "5rem",
+            textAlign: "center",
+            padding: "0rem 1rem 1rem 1rem",
+            paddingLeft: "1rem",
+            paddingRight: "1rem",
+            textAlign: "center",
+            fontWeight: 700,
             [breakpoints.down("sm")]: {
                 fontSize: "3rem",
-                padding: "0rem 1rem 1rem 1rem",
-                textAlign: "center",
             },
         },
         h2: {
             fontSize: "3rem",
+            fontWeight: 700,
+            textAlign: "center",
             [breakpoints.down("sm")]: {
                 fontSize: "2rem",
-                paddingLeft: "1rem",
-                paddingRight: "1rem",
-                textAlign: "center",
+            },
+        },
+        h3: {
+            fontSize: "2.5rem",
+            fontWeight: 700,
+            [breakpoints.down("md")]: {
+                fontSize: "2rem",
+            },
+            [breakpoints.down("sm")]: {
+                fontSize: "1.5rem",
+            },
+        },
+        subtitle2: {
+            fontSize: "0.8rem",
+        },
+        body1: {
+            fontSize: "1rem",
+            [breakpoints.down("md")]: {
+                fontSize: "0.9rem",
+            },
+            [breakpoints.down("sm")]: {
+                fontSize: "0.8rem",
+            },
+        },
+        body2: {
+            fontSize: "1rem",
+            padding: "1rem 4rem",
+            [breakpoints.down("sm")]: {
+                padding: "1rem 1rem",
+                fontSize: "0.8rem",
             },
         },
     },
-
     palette: {
         type: "light",
         primary: {

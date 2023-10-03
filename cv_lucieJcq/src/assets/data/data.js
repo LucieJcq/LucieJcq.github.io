@@ -5,6 +5,7 @@ export default {
             link: "about",
         },
         { name: "Compétences", link: "skills" },
+        { name: "Formations", link: "formations" },
         { name: "Expériences", link: "experiences" },
         { name: "Contact", link: "contact" },
     ],
@@ -41,72 +42,110 @@ export default {
             },
         ],
     },
-    skills: {
-        hardskills: {
-            name: "Hardskills",
-            skills: [
+    skills: [
+        {
+            hardskills: [
                 {
-                    name: "HTML",
-                    icon: "fab fa-html5",
+                    name: "Hardskills",
+                    skills: [
+                        {
+                            name: "HTML",
+                            icon: " faHtml5",
+                        },
+                        {
+                            name: "CSS",
+                            icon: " CssSharpIcon",
+                        },
+                        {
+                            name: "Javascript",
+                            icon: " fa-js-square",
+                        },
+                        {
+                            name: "React",
+                            icon: " fa-react",
+                        },
+                        {
+                            name: "Git",
+                            icon: " fa-git-alt",
+                        },
+                        {
+                            name: "Wordpress",
+                            icon: " fa-wordpress-simple",
+                        },
+                        {
+                            name: "PHP",
+                            icon: " fa-php",
+                        },
+                        {
+                            name: "SQL",
+                            icon: "fas fa-database",
+                        },
+                    ],
                 },
+            ],
+            softskills: [
                 {
-                    name: "CSS",
-                    icon: "fab fa-css3-alt",
-                },
-                {
-                    name: "Javascript",
-                    icon: "fab fa-js-square",
-                },
-                {
-                    name: "React",
-                    icon: "fab fa-react",
-                },
-                {
-                    name: "Git",
-                    icon: "fab fa-git-alt",
-                },
-                {
-                    name: "Wordpress",
-                    icon: "fab fa-wordpress-simple",
-                },
-                {
-                    name: "PHP",
-                    icon: "fab fa-php",
-                },
-                {
-                    name: "SQL",
-                    icon: "fas fa-database",
+                    name: "Softskills",
+                    skills: [
+                        {
+                            name: "Curieuse",
+                            icon: "fas fa-search",
+                        },
+                        {
+                            name: "Autonome",
+                            icon: "fas fa-user",
+                        },
+                        {
+                            name: "Travail en équipe",
+                            icon: "fas fa-users",
+                        },
+                        {
+                            name: "Communication",
+                            icon: "fas fa-comments",
+                        },
+                        {
+                            name: "Adaptabilité",
+                            icon: "fas fa-adjust",
+                        },
+                        {
+                            name: "Analyse constructive",
+                            icon: "fas fa-chart-line",
+                        },
+                    ],
                 },
             ],
         },
-        softskills: {
-            name: "Softskills",
-            skills: [
-                {
-                    name: "Curieuse",
-                    icon: "fas fa-search",
-                },
-                {
-                    name: "Autonome",
-                    icon: "fas fa-user",
-                },
-                {
-                    name: "Travail en équipe",
-                    icon: "fas fa-users",
-                },
-                {
-                    name: "Communication",
-                    icon: "fas fa-comments",
-                },
-                {
-                    name: "Adaptabilité",
-                    icon: "fas fa-adjust",
-                },
-                {
-                    name: "Analyse constructive",
-                    icon: "fas fa-chart-line",
-                },
+    ],
+    formations: [
+        {
+            title: "Développeur Web & Web Mobile",
+            date: "2023 - 6mois",
+            place: "O'Clock",
+            resume: "Formation intensive de 5 mois en téléprésentiel avec une spécialisation en React",
+            description: [
+                "Apprentissage des langages HTML, CSS, JavaScript, et PHP pour la création de sites web dynamiques.",
+                "Expérience en Programmation Orientée Objet, développement mobile, et gestion des bases de données.",
+                "Maîtrise des outils tels que Git, Linux, et GitHub.",
+                "Connaissance des concepts avancés tels que l'optimisation du référencement naturel et l'utilisation de design patterns.",
+                "Expérience pratique avec la structuration d'applications, la sécurité, et la gestion des interfaces clients.",
+                "Utilisation de micro-frameworks, d'API et de la technique AJAX pour la communication entre services.",
+                "Utilisation de WordPress.",
             ],
         },
-    },
+        {
+            title: "Master Histoire Archives et Monde du travail",
+            date: "2015 - 2017",
+            place: "Université de Lille",
+        },
+        {
+            title: "Licence  Ressources documentaires et bases de données (spécialisation archives)",
+            date: "2014-2015",
+            place: "Université de Lille",
+        },
+        {
+            title: "DEUST métiers des bibliothèques et de la documentation",
+            date: "2010-2012",
+            place: "Université de Lille",
+        },
+    ],
 };
