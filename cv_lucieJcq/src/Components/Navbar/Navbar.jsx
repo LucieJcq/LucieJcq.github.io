@@ -31,7 +31,7 @@ const NavBar = () => {
     return (
         <ScrollEffect>
             <AppBar position="fixed">
-                <Container maxWidth="xl">
+                <Container maxWidth="false">
                     <Toolbar disableGutters>
                         <Avatar
                             color="primary"

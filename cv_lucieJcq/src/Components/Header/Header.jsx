@@ -10,12 +10,13 @@ const Header = () => {
     return (
         <Container
             disableGutters
-            maxWidth="xl"
+            maxWidth="false"
             style={{
                 backgroundImage: `url( ${background}`,
                 height: "100vh",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
+                backgroundWidth: "100%",
             }}
         >
             <NavBar />

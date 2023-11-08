@@ -71,14 +71,25 @@ const Skills = () => {
 function SkillList({ name, skills }) {
     return (
         <Grid xs={6} sx={{ padding: "1rem" }}>
-            <Typography variant="h3" fontFamily="AmaticSC" fontWeight={700}>
+            <Typography
+                variant="h3"
+                sx={{
+                    fontFamily: "AmaticSC",
+                    fontWeight: 700,
+                    paddingBottom: 1,
+                }}
+            >
                 {name}
             </Typography>
-            <Typography variant="body1">
-                {skills.map((skill, index) => (
-                    <p key={skill.name + index}>{skill.name}</p>
-                ))}
-            </Typography>
+            {skills.map((skill, index) => (
+                <Typography
+                    variant="body1"
+                    key={skill.name + index}
+                    sx={{ padding: "0.5rem" }}
+                >
+                    {skill.name}
+                </Typography>
+            ))}
         </Grid>
     );
 }

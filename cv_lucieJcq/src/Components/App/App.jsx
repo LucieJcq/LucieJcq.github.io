@@ -8,6 +8,9 @@ import Header from "../Header/Header";
 import About from "../About/About";
 import Skills from "../Skills/Skills";
 import Formation from "../Formation/Formation";
+import Experiences from "../Experiences/Experiences";
+import Projects from "../Projects/Projects";
+import Footer from "../Footer/Footer";
 
 function App() {
     return (
@@ -17,7 +20,10 @@ function App() {
             <Header className="App-header" />
             <About />
             <Skills />
+            <Projects />
             <Formation />
+            <Experiences />
+            <Footer />
         </ThemeProvider>
     );
 }

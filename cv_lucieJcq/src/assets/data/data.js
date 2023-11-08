@@ -139,13 +139,31 @@ export default {
         },
         {
             title: "Licence  Ressources documentaires et bases de données (spécialisation archives)",
-            date: "2014-2015",
+            date: "2014 - 2015",
             place: "Université de Lille",
         },
         {
             title: "DEUST métiers des bibliothèques et de la documentation",
-            date: "2010-2012",
+            date: "2010 - 2012",
             place: "Université de Lille",
+        },
+    ],
+    experiences: [
+        {
+            name: "Archiviste",
+            place: "AGS Records Management",
+            duration: "2019 - 2023",
+            skills: ["Audit", "Communication avec les clients", "Reporting"],
+        },
+        {
+            name: "Responsable des archives vacataire",
+            place: "Direction Régionale de l'Environnement, de l'Aménagement et du Logement Hauts-de-France",
+            duration: "2018 - 2019",
+            skills: [
+                "Programmation et gestion de prestation",
+                "Gestion de projet",
+                "Sensibilisation des agents",
+            ],
         },
     ],
 };
