@@ -1,4 +1,6 @@
-import { Box, Container, useMediaQuery } from "@mui/material";
+import { useRef } from "react";
+
+import { Box, Container, List, ListItem, useMediaQuery } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import TaskAltIcon from "@mui/icons-material/TaskAlt";
 
@@ -7,8 +9,10 @@ import data from "../../assets/data/data.js";
 const Formation = () => {
     const isDesktop = useMediaQuery("(min-width: 1024px)");
     const isMobile = useMediaQuery("(max-width: 600px)");
+
     return (
         <Box
+            id="formations"
             sx={{
                 backgroundColor: "rgba(	133,	141,	125, 0.2)",
                 paddingTop: isMobile ? "3rem" : "4rem",
@@ -29,7 +33,7 @@ const Formation = () => {
                 {data.formations.map((formation) => {
                     return (
                         <Box
-                            key={formation.name}
+                            key={formation.title}
                             sx={{ paddingBottom: isDesktop ? "2rem" : "1rem" }}
                         >
                             <Typography
@@ -49,22 +53,26 @@ const Formation = () => {
                             >
                                 {formation.date}, {formation.place}
                             </Typography>
-
-                            {formation.description &&
-                            formation.description.length > 0
-                                ? formation.description.map((text) => (
-                                      <Typography
-                                          key={Object.keys(text)}
-                                          variant="body1"
-                                          sx={{ paddingBottom: 1 }}
-                                      >
-                                          <TaskAltIcon
-                                              sx={{ fontSize: "1rem" }}
-                                          />{" "}
-                                          {text}
-                                      </Typography>
-                                  ))
-                                : null}
+                            <List>
+                                {formation.description &&
+                                formation.description.length > 0
+                                    ? formation.description.map((text) => (
+                                          <ListItem
+                                              key={text}
+                                              variant="body1"
+                                              sx={{ paddingBottom: 1 }}
+                                          >
+                                              <TaskAltIcon
+                                                  sx={{
+                                                      fontSize: "2em",
+                                                      paddingRight: "0.5em",
+                                                  }}
+                                              />{" "}
+                                              {text}
+                                          </ListItem>
+                                      ))
+                                    : null}
+                            </List>
                         </Box>
                     );
                 })}

@@ -2,12 +2,12 @@ export default {
     parts: [
         {
             name: "Présentation",
-            link: "about",
+            ref: "about",
         },
-        { name: "Compétences", link: "skills" },
-        { name: "Formations", link: "formations" },
-        { name: "Expériences", link: "experiences" },
-        { name: "Contact", link: "contact" },
+        { name: "Compétences", ref: "skills" },
+        { name: "Projets", ref: "projects" },
+        { name: "Formations", ref: "formations" },
+        { name: "Expériences", ref: "experiences" },
     ],
     about: {
         title: "Bonjour!",
@@ -39,6 +39,18 @@ export default {
             {
                 title: "Langues",
                 text: ["français", "anglais"],
+            },
+        ],
+        socialNetworks: [
+            {
+                name: "LinkedIn",
+                link: "https://www.linkedin.com/in/lucie-jacquemin-0976196a/",
+                icon: "LinkedInIcon",
+            },
+            {
+                name: "Github",
+                link: "https://github.com/LucieJcq",
+                icon: "GitHubIcon",
             },
         ],
     },
@@ -164,6 +176,15 @@ export default {
                 "Gestion de projet",
                 "Sensibilisation des agents",
             ],
+        },
+    ],
+    projects: [
+        {
+            name: "Cosmokids",
+            description:
+                "Projet de fin de formation dans une équipe de 4 développeurs. Il s'agit d'une plateforme d'apprentissage pour les enfants sur la thématique de l'espace. L'application est réalisé en React et Laravel.",
+            link: "www.cosmokids.vercel.app",
+            picture: "cosmokids",
         },
     ],
 };

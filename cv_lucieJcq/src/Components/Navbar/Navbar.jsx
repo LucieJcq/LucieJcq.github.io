@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, createRef } from "react";
 
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -20,12 +20,21 @@ import datas from "../../assets/data/data.js";
 
 const NavBar = () => {
     const [anchorElNav, setAnchorElNav] = useState(null);
+
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
     };
 
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
+    };
+
+    const handleNavigation = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+            handleCloseNavMenu();
+        }
     };
 
     return (
@@ -95,14 +104,11 @@ const NavBar = () => {
                                     return (
                                         <MenuItem
                                             key={part.name}
-                                            onClick={handleCloseNavMenu}
+                                            onClick={() => {
+                                                handleNavigation(part.ref);
+                                            }}
                                         >
-                                            <Typography
-                                                textAlign="center"
-                                                color="inherit"
-                                            >
-                                                {part.name}
-                                            </Typography>
+                                            {part.name}
                                         </MenuItem>
                                     );
                                 })}
@@ -143,12 +149,14 @@ const NavBar = () => {
                                 <Button
                                     color="inherit"
                                     key={part.name}
-                                    onClick={handleCloseNavMenu}
+                                    onClick={() => {
+                                        handleNavigation(part.ref);
+                                    }}
                                     sx={{
                                         my: 2,
                                         display: "block",
                                         fontWeight: "700",
-                                        //letterSpacing: "2px",
+                                        margin: 0,
                                         fontSize: "1.6rem",
                                         fontFamily: "AmaticSC",
                                     }}

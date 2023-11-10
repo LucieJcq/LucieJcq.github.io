@@ -1,10 +1,9 @@
-import { Box, useMediaQuery } from "@mui/material";
+import { useRef } from "react";
+import { Box, useMediaQuery, ListItem, List } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Unstable_Grid2";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import CssSharpIcon from "@mui/icons-material/CssSharp";
 import {
     fab,
     faHtml5,
@@ -21,9 +20,11 @@ const Skills = () => {
     const hardskillsData = datas.skills[0].hardskills[0];
     const softskillsData = datas.skills[0].softskills[0];
     const isMobile = useMediaQuery("(max-width: 600px)");
+
     return (
         <Box
             className="Skills"
+            id="skills"
             sx={{
                 backgroundColor: "#1F2B17",
                 width: "100%",
@@ -70,7 +71,7 @@ const Skills = () => {
 
 function SkillList({ name, skills }) {
     return (
-        <Grid xs={6} sx={{ padding: "1rem" }}>
+        <Grid xs={6} sx={{ padding: "1rem", textAlign: "center" }}>
             <Typography
                 variant="h3"
                 sx={{
@@ -81,15 +82,25 @@ function SkillList({ name, skills }) {
             >
                 {name}
             </Typography>
+            {/* <List
+                sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    textAlign: "center",
+                }}
+            > */}
             {skills.map((skill, index) => (
                 <Typography
-                    variant="body1"
                     key={skill.name + index}
-                    sx={{ padding: "0.5rem" }}
+                    sx={{
+                        padding: "0.5rem",
+                    }}
                 >
                     {skill.name}
                 </Typography>
             ))}
+            {/* </List> */}
         </Grid>
     );
 }

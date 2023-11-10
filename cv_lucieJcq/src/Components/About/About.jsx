@@ -1,5 +1,16 @@
-import { Box, Container, useMediaQuery } from "@mui/material";
-import Typography from "@mui/material/Typography";
+import { useRef } from "react";
+
+import {
+    Box,
+    Container,
+    useMediaQuery,
+    IconButton,
+    Link,
+    Typography,
+} from "@mui/material";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+
 import datas from "../../assets/data/data.js";
 
 function AboutSection(props) {
@@ -28,11 +39,14 @@ function AboutSection(props) {
 }
 
 const About = () => {
+    const about = useRef(null);
+
     const isDesktop = useMediaQuery("(min-width: 1024px)");
     const isMobile = useMediaQuery("(max-width: 600px)");
 
     return (
         <Container
+            id="about"
             maxWidth="md"
             sx={{
                 borderRadius: isDesktop ? 20 : 0,
@@ -105,6 +119,33 @@ const About = () => {
                             sectionTitle={sectionTitle}
                             text={text}
                         />
+                    );
+                })}
+            </Box>
+            <Box
+                sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                }}
+            >
+                {datas.about.socialNetworks.map((socialNetwork) => {
+                    let icon = socialNetwork.icon;
+                    switch (icon) {
+                        case "GitHubIcon":
+                            icon = <GitHubIcon />;
+                            break;
+                        case "LinkedInIcon":
+                            icon = <LinkedInIcon />;
+                            break;
+                        default:
+                            icon = null;
+                    }
+                    return (
+                        <Link href={socialNetwork.link}>
+                            <IconButton key={socialNetwork.name} size="large">
+                                {icon}
+                            </IconButton>
+                        </Link>
                     );
                 })}
             </Box>

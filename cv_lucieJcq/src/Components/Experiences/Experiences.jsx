@@ -1,4 +1,12 @@
-import { Box, Typography, Container, useMediaQuery } from "@mui/material";
+import { useRef } from "react";
+import {
+    Box,
+    Typography,
+    Container,
+    useMediaQuery,
+    List,
+    ListItem,
+} from "@mui/material";
 import TaskAltIcon from "@mui/icons-material/TaskAlt";
 
 import data from "../../assets/data/data.js";
@@ -8,13 +16,20 @@ const Experiences = () => {
     const isMobile = useMediaQuery("(max-width: 600px)");
     return (
         <Box
+            id="experiences"
             sx={{
                 backgroundColor: "#1F2B17",
                 paddingTop: isMobile ? "3rem" : "4rem",
                 color: "white",
             }}
         >
-            <Typography variant="h2" sx={{ fontFamily: "cabinSketch" }}>
+            <Typography
+                variant="h2"
+                sx={{
+                    fontFamily: "cabinSketch",
+                    paddingBottom: isMobile ? "2rem" : "3.5rem",
+                }}
+            >
                 MES EXPERIENCES PROFESSIONNELLES
             </Typography>
 
@@ -42,21 +57,26 @@ const Experiences = () => {
                             >
                                 {experience.duration}, {experience.place}
                             </Typography>
-
-                            {experience.skills && experience.skills.length > 0
-                                ? experience.skills.map((text) => (
-                                      <Typography
-                                          key={Object.keys(text)}
-                                          variant="body1"
-                                          sx={{ paddingBottom: 1 }}
-                                      >
-                                          <TaskAltIcon
-                                              sx={{ fontSize: "1rem" }}
-                                          />{" "}
-                                          {text}
-                                      </Typography>
-                                  ))
-                                : null}
+                            <List>
+                                {experience.skills &&
+                                experience.skills.length > 0
+                                    ? experience.skills.map((text) => (
+                                          <ListItem
+                                              key={Object.keys(text)}
+                                              variant="body1"
+                                              sx={{ paddingBottom: 1 }}
+                                          >
+                                              <TaskAltIcon
+                                                  sx={{
+                                                      fontSize: "2em",
+                                                      paddingRight: "0.5em",
+                                                  }}
+                                              />{" "}
+                                              {text}
+                                          </ListItem>
+                                      ))
+                                    : null}
+                            </List>
                         </Box>
                     );
                 })}
