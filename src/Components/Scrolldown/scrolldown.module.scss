@@ -1,0 +1,43 @@
+.scrolldownWrapper {
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+}
+
+.scrolldown {
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    height: 60px;
+    margin: 0 auto 8px;
+    text-align: center;
+    width: 40px;
+}
+
+.scrolldownP1,
+.scrolldownP2 {
+    animation-duration: 1.5s;
+    animation-name: scrolldown;
+    animation-iteration-count: infinite;
+    fill: #ffffff;
+}
+
+.scrolldownP2 {
+    animation-delay: 0.75s;
+}
+
+@keyframes scrolldown {
+    0% {
+        opacity: 0;
+        transform: translate(0, -8px);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(0, 8px);
+    }
+}
