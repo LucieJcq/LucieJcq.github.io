@@ -13,7 +13,7 @@ export default {
         title: "Bonjour!",
         texts: [
             "Je m'appelle <strong>Lucie Jacquemin</strong> et je suis <strong>développeuse front-end</strong>.",
-            "Après quelques années dans le milieu des archives, <strong>l'envie de changement</strong> m'a poussé vers le chemin de la <strong>reconversion</strong> vers un métier plus en raccord avec mes envies. Atirée par les possibilités offertes par le <strong>développement web</strong>, j'ai réalisé <strong>la formation développeur Web & Mobile de O'Clock</strong> avec une spécialisation en <strong>React</strong>",
+            "Après quelques années dans le milieu des archives, <strong>l'envie de changement</strong> m'a poussé vers le chemin de la <strong>reconversion</strong> vers un métier plus en raccord avec mes envies. Attirée par les possibilités offertes par le <strong>développement web</strong>, j'ai réalisé <strong>la formation développeur Web & Mobile de O'Clock</strong> avec une spécialisation en <strong>React</strong>",
             "Désormais je cherche à mettre en pratique mes connaissances et gagner en expérience dans le cadre d'une <strong>alternance</strong>.",
         ],
         informations: [
@@ -135,7 +135,8 @@ export default {
             place: "O'Clock",
             resume: "Formation intensive de 5 mois en téléprésentiel avec une spécialisation en React",
             description: [
-                "Apprentissage des langages HTML, CSS, JavaScript, et PHP pour la création de sites web dynamiques.",
+                "3 mois de socle avec l'apprentissage des langages HTML, CSS, JavaScript, et PHP pour la création de sites web dynamiques.",
+                "1 mois de spécialisation en React",
                 "Expérience en Programmation Orientée Objet, développement mobile, et gestion des bases de données.",
                 "Maîtrise des outils tels que Git, Linux, et GitHub.",
                 "Connaissance des concepts avancés tels que l'optimisation du référencement naturel et l'utilisation de design patterns.",
@@ -183,7 +184,7 @@ export default {
             name: "Cosmokids",
             description:
                 "Projet de fin de formation dans une équipe de 4 développeurs. Il s'agit d'une plateforme d'apprentissage pour les enfants sur la thématique de l'espace. L'application est réalisé en React et Laravel.",
-            link: "www.cosmokids.vercel.app",
+            link: "https://cosmokids.eu",
             picture: "cosmokids",
         },
     ],

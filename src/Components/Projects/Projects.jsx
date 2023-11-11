@@ -1,6 +1,5 @@
 import { useState } from "react";
 import {
-    Card,
     Box,
     Typography,
     useMediaQuery,
@@ -8,6 +7,7 @@ import {
     Paper,
     MobileStepper,
     Button,
+    Link,
 } from "@mui/material";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
@@ -20,7 +20,9 @@ import data from "../../assets/data/data.js";
 const Projects = () => {
     const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
     const isDesktop = useMediaQuery("(min-width: 1024px)");
+    const isTablet = useMediaQuery("(min-width: 601px)");
     const isMobile = useMediaQuery("(max-width: 600px)");
+
     const theme = useTheme();
     const [activeStep, setActiveStep] = useState(0);
     const maxSteps = data.projects.length;
@@ -35,7 +37,6 @@ const Projects = () => {
     const handleStepChange = (step) => {
         setActiveStep(step);
     };
-
     return (
         <Box
             id="projects"
@@ -44,12 +45,18 @@ const Projects = () => {
                 paddingBottom: isMobile ? "3rem" : "4rem",
             }}
         >
-            <Typography variant="h2" sx={{ fontFamily: "cabinSketch" }}>
+            <Typography
+                variant="h2"
+                sx={{
+                    fontFamily: "cabinSketch",
+                    paddingBottom: isMobile ? "2rem" : "3rem",
+                }}
+            >
                 MES PROJETS
             </Typography>
             <Box
                 sx={{
-                    width: "30%",
+                    width: isTablet ? "50%" : "90%",
                     margin: "auto",
                     height: "fit-content",
                     flexGrow: 1,
@@ -68,7 +75,14 @@ const Projects = () => {
                         paddingBottom: isMobile ? "1rem" : "2rem",
                     }}
                 >
-                    <Typography variant="h4" sx={{ fontFamily: "AmaticSC" }}>
+                    <Typography
+                        variant="h4"
+                        sx={{
+                            fontFamily: "AmaticSC",
+                            fontSize: isMobile ? "2.3em" : "3em",
+                            fontWeight: 700,
+                        }}
+                    >
                         {data.projects[activeStep].name}
                     </Typography>
                 </Paper>
@@ -91,17 +105,22 @@ const Projects = () => {
                         return (
                             <div key={step.name}>
                                 {Math.abs(activeStep - index) <= 2 ? (
-                                    <Box
-                                        component="img"
-                                        sx={{
-                                            width: "80%",
-                                            display: "block",
-                                            overflow: "hidden",
-                                            width: "100%",
-                                        }}
-                                        src={image}
-                                        alt={step.name}
-                                    />
+                                    <Link
+                                        href={step.link}
+                                        alt="Application CosmoKids"
+                                    >
+                                        <Box
+                                            component="img"
+                                            sx={{
+                                                width: "80%",
+                                                display: "block",
+                                                overflow: "hidden",
+                                                width: "100%",
+                                            }}
+                                            src={image}
+                                            alt={step.name}
+                                        />
+                                    </Link>
                                 ) : null}
                             </div>
                         );
@@ -143,44 +162,6 @@ const Projects = () => {
             </Box>
         </Box>
     );
-    //     <Box id="projects" sx={{ paddingTop: isMobile ? "3rem" : "4rem" }}>
-    //         <Typography variant="h2" sx={{ fontFamily: "cabinSketch" }}>
-    //             MES PROJETS
-    //         </Typography>
-    //         {data.projects.map((item) => {
-    //             let image = item.picture;
-    //             console.log(image);
-    //             switch (image) {
-    //                 case "cosmokids":
-    //                     image = cosmokids;
-    //                     break;
-    //                 default:
-    //                     image = null;
-    //             }
-
-    //             return (
-    //                 <Card
-    //                     orientation="horizontal"
-    //                     size="sm"
-    //                     key={item.name}
-    //                     variant="outlined"
-    //                 >
-    //                     <AspectRatio ratio="1" sx={{ minWidth: 60 }}>
-    //                         <img src={image} alt={item.name} />
-    //                     </AspectRatio>
-    //                     <Box sx={{ whiteSpace: "nowrap", mx: 1 }}>
-    //                         <Typography level="title-md">
-    //                             {item.name}
-    //                         </Typography>
-    //                         <Typography level="body-sm">
-    //                             {item.description}
-    //                         </Typography>
-    //                     </Box>
-    //                 </Card>
-    //             );
-    //         })}
-    //     </Box>
-    // );
 };
 
 export default Projects;
