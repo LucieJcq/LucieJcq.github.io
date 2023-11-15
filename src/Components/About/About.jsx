@@ -141,7 +141,10 @@ const About = () => {
                             icon = null;
                     }
                     return (
-                        <Link href={socialNetwork.link}>
+                        <Link
+                            key={socialNetwork.name}
+                            href={socialNetwork.link}
+                        >
                             <IconButton key={socialNetwork.name} size="large">
                                 {icon}
                             </IconButton>

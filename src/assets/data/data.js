@@ -187,5 +187,12 @@ export default {
             link: "https://cosmokids.eu",
             picture: "cosmokids",
         },
+        {
+            name: "Portfolio",
+            description:
+                "Portfolio conçu et réalisé personnellement à l'aide de React et de Material UI. Il est responsive et accessible.",
+            link: "https://luciejcq.github.io",
+            picture: "portfolio",
+        },
     ],
 };
